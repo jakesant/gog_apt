@@ -34,25 +34,27 @@ def plot_confusion_matrix(cm, classes,
                  horizontalalignment="center",
                  color="white" if cm[i, j] > thresh else "black")
 
-    plt.tight_layout()
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
     plt.savefig('Visualizations/' + title + '.png')
 
-def pie(csv_file, activity_encode, max):
+
+def pie(csv_file, title, activity_encode, max):
     data = pd.read_csv(csv_file)
     data['Label'] = data['Label'].map(activity_encode)
     data, _ = [x for _, x in data.groupby(data['Label'] > max)]
 
     temp = data["Label"].value_counts()
-    df = pd.DataFrame({'labels': list(activity_encode.keys())[:(max+1)],
+    print(len(list(activity_encode.keys())[:(max + 1)]))
+    print(len(temp.values))
+    df = pd.DataFrame({'labels': list(activity_encode.keys())[:(max + 1)],
                        'values': temp.values
-                      })
+                       })
 
     labels = df['labels']
     sizes = df['values']
     patches, texts = plt.pie(sizes, shadow=True, startangle=90, pctdistance=1.1, labeldistance=1.2)
     plt.legend(patches, labels, loc="best")
     plt.axis('equal')
-    plt.tight_layout()
-    plt.show()
+    plt.savefig('Visualizations/' + title + '.png')
+

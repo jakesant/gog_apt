@@ -6,7 +6,9 @@ The 4 notebooks included are:
 * ODDCNN = Our Data Dynamic CNN
 * ODSCNN = Oyr Data Static CNN
 
-In the folders *Our Dataset* and *UCI Dataset* you will find the respective datasets.
+In the *Our Dataset* and *UCI Dataset* folders you will find the respective datasets.
+
+In the *Models* folder you will find Pytorch model checkpoints for each model. 
 
 In Helper.py you will find some visualization functions.
 
