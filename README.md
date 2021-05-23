@@ -10,6 +10,8 @@ In the *Our Dataset* and *UCI Dataset* folders you will find the respective data
 
 In the *Models* folder you will find Pytorch model checkpoints for each model. 
 
+In the *visualizations* folder you will find visualizations generated with these notebooks and the [Netron tool](https://github.com/lutzroeder/netron) 
+
 In Helper.py you will find some visualization functions.
 
 Please run ```pip install -r requirements.txt``` before using these notebooks.

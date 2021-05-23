@@ -39,14 +39,13 @@ def plot_confusion_matrix(cm, classes,
     plt.savefig('Visualizations/' + title + '.png')
 
 
-def pie(csv_file, title, activity_encode, max):
+def pie(csv_file, title, activity_encode, max, labelname, encode=True):
     data = pd.read_csv(csv_file)
-    data['Label'] = data['Label'].map(activity_encode)
-    data, _ = [x for _, x in data.groupby(data['Label'] > max)]
+    if encode:
+        data[labelname] = data[labelname].map(activity_encode)
+    data = [x for _, x in data.groupby(data[labelname] > max)][0]
 
-    temp = data["Label"].value_counts()
-    print(len(list(activity_encode.keys())[:(max + 1)]))
-    print(len(temp.values))
+    temp = data[labelname].value_counts()
     df = pd.DataFrame({'labels': list(activity_encode.keys())[:(max + 1)],
                        'values': temp.values
                        })
