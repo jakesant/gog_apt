@@ -1,10 +1,11 @@
 # CNN Notebook Section
 In this section we used a number of techniques and experimented with a number of CNN architectures before we settled on the ones implemented.
 The 4 notebooks included are:
+* DACMLT = 
 * DCNN = UCI Dynamic CNN
 * SCNN = UCI Static CNN
 * ODDCNN = Our Data Dynamic CNN
-* ODSCNN = Oyr Data Static CNN
+* ODSCNN = Oor Data Static CNN
 
 In the *Our Dataset* and *UCI Dataset* folders you will find the respective datasets.
 
