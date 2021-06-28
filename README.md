@@ -1,7 +1,7 @@
 # CNN Notebook Section
 In this section we used a number of techniques and experimented with a number of CNN architectures before we settled on the ones implemented.
 The 4 notebooks included are:
-* DACMLT = 
+* DACMLT = Data Analysis and Classic Machine Learning Techniques
 * DCNN = UCI Dynamic CNN
 * SCNN = UCI Static CNN
 * ODDCNN = Our Data Dynamic CNN
